@@ -10,15 +10,6 @@ interface PatternResultsProps {
 export const PatternResults: React.FC<PatternResultsProps> = ({ result, processedImage, onReset }) => {
   if (!result) return null;
 
-  const getComplexityColor = (level: string) => {
-    switch (level) {
-      case 'simple': return '#4caf50';
-      case 'moderate': return '#ff9800';
-      case 'complex': return '#f44336';
-      default: return '#999';
-    }
-  };
-
   return (
     <div style={styles.container}>
       <h2 style={styles.title}>Image Captured Successfully! ✅</h2>
